@@ -16,8 +16,8 @@
     }
   },
   "lint-staged": {
-    "*.vue": [
-      "eslint --ext .vue --fix",
+    "*.{js,ts,vue}": [
+      "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
       "git add"
     ]
   },
