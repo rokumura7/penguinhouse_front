@@ -7,13 +7,19 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint": "eslint --fix　--ext .js,.ts,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.@(ts|js|vue)": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
