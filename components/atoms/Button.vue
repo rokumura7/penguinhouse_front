@@ -25,7 +25,7 @@ export default Vue.extend({
     onClick: {
       type: Function,
       required: false,
-      default: () => {},
+      default: undefined,
     },
   },
   computed: {
