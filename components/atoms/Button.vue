@@ -60,10 +60,10 @@ export default Vue.extend({
       }
       switch (this.size) {
         case 'small':
-          classes.push('py-1 px-2 text-sm')
+          classes.push('py-1', 'px-2', 'text-sm')
           break
         default:
-          classes.push('py-2 px-3')
+          classes.push('py-2', 'px-3')
       }
       switch (this.roundFull) {
         case true:
