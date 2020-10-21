@@ -54,5 +54,7 @@ export default {
   },
 
   // Storybook Options (https://storybook.nuxtjs.org/options/)
-  storybook: {},
+  storybook: {
+    addons: ['@storybook/addon-essentials'],
+  },
 }
