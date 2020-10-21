@@ -1,7 +1,10 @@
 # COMPONENTS
 
-**This directory is not required, you can delete it if you don't want to use it.**
 
-The components directory contains your Vue.js Components.
+## storybook
+### run
 
-_Nuxt.js doesn't supercharge these components._
+```
+npm run storybook
+```
+Go to http://localhost:3003 and you can see the story

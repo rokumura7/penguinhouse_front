@@ -8,7 +8,8 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint": "eslint --fix　--ext .js,.ts,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "npx nuxt storybook"
   },
   "husky": {
     "hooks": {
@@ -25,6 +26,7 @@
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/storybook": "^3.0.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },
