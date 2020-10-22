@@ -65,13 +65,8 @@ export default Vue.extend({
         default:
           classes.push('py-2', 'px-3')
       }
-      switch (this.roundFull) {
-        case true:
-          classes.push('rounded-full')
-          break
-        default:
-          classes.push('rounded')
-      }
+      classes.push(this.roundFull ? 'rounded-full' : 'rounded')
+
       return classes.join(' ')
     },
   },
