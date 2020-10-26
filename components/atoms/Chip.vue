@@ -28,7 +28,7 @@ export default Vue.extend({
   computed: {
     getColor(): String {
       const colorSet = getColorSet(this.color)
-      return [colorSet.bg, colorSet.bgHover].join(' ')
+      return colorSet.bg
     },
   },
 })
