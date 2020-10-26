@@ -9,8 +9,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-
-type Color = 'primary' | 'warning' | 'danger'
+import { Color, getColorSet } from '../../plugins/Colors'
 
 export default Vue.extend({
   name: 'Chip',
@@ -28,11 +27,8 @@ export default Vue.extend({
   },
   computed: {
     getColor(): String {
-      return this.color === 'danger'
-        ? 'bg-red-500 hover:bg-red-600'
-        : this.color === 'warning'
-        ? 'bg-yellow-500 hover:bg-yellow-600'
-        : 'bg-indigo-500 hover:bg-indigo-600'
+      const colorSet = getColorSet(this.color)
+      return [colorSet.bg, colorSet.bgHover].join(' ')
     },
   },
 })
