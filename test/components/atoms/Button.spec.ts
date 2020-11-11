@@ -30,85 +30,53 @@ describe('Test for Button Basic.', () => {
   })
 })
 
-describe('Test for Button Color.', () => {
-  const primary = mount(Button, {
+describe.each([
+  [
+    'primary',
+    '<button class="font-semibold bg-blue-500 text-white py-2 px-3 rounded"> test </button>',
+  ],
+  [
+    'warning',
+    '<button class="font-semibold bg-yellow-500 text-white py-2 px-3 rounded"> test </button>',
+  ],
+  [
+    'danger',
+    '<button class="font-semibold bg-red-500 text-white py-2 px-3 rounded"> test </button>',
+  ],
+  [
+    'black',
+    '<button class="font-semibold bg-gray-900 text-gray-100 hover:bg-gray-900 py-2 px-3 rounded"> test </button>',
+  ],
+])('Test for Button Color: %i', (type, expected) => {
+  const button = mount(Button, {
     propsData: {
       label: 'test',
-      type: 'primary',
+      type,
     },
   })
-
-  it('renders the correct markup: color = primary', () => {
-    expect(primary.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-blue-500 text-white py-2 px-3 rounded"> test </button>'
-    )
-  })
-
-  const warning = mount(Button, {
-    propsData: {
-      label: 'test',
-      type: 'warning',
-    },
-  })
-
-  it('renders the correct markup: color = warning', () => {
-    expect(warning.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-yellow-500 text-white py-2 px-3 rounded"> test </button>'
-    )
-  })
-
-  const danger = mount(Button, {
-    propsData: {
-      label: 'test',
-      type: 'danger',
-    },
-  })
-
-  it('renders the correct markup: color = danger', () => {
-    expect(danger.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-red-500 text-white py-2 px-3 rounded"> test </button>'
-    )
-  })
-
-  const black = mount(Button, {
-    propsData: {
-      label: 'test',
-      type: 'black',
-    },
-  })
-
-  it('renders the correct markup: color = black', () => {
-    expect(black.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-gray-900 text-gray-100 hover:bg-gray-900 py-2 px-3 rounded"> test </button>'
-    )
+  it(`renders the correct markup: color = ${type}`, () => {
+    expect(button.html().replace(/\s+/g, ' ')).toBe(expected)
   })
 })
 
-describe('Test for Button Size.', () => {
-  const normal = mount(Button, {
+describe.each([
+  [
+    'normal',
+    '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-2 px-3 rounded"> test </button>',
+  ],
+  [
+    'small',
+    '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-1 px-2 text-sm rounded"> test </button>',
+  ],
+])('Test for Button Size. %i', (size, expected) => {
+  const button = mount(Button, {
     propsData: {
       label: 'test',
-      size: 'normal',
+      size,
     },
   })
-
-  it('renders the correct markup: size = normal', () => {
-    expect(normal.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-2 px-3 rounded"> test </button>'
-    )
-  })
-
-  const small = mount(Button, {
-    propsData: {
-      label: 'test',
-      size: 'small',
-    },
-  })
-
-  it('renders the correct markup: size = small', () => {
-    expect(small.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-1 px-2 text-sm rounded"> test </button>'
-    )
+  it(`renders the correct markup: size = ${size}`, () => {
+    expect(button.html().replace(/\s+/g, ' ')).toBe(expected)
   })
 })
 
