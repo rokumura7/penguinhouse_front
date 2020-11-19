@@ -20,7 +20,7 @@ describe('Test for Button Basic.', () => {
 
   it('renders the correct markup', () => {
     expect(wrapper.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-2 px-3 rounded"> test </button>'
+      '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-2 px-3 rounded"> test </button>'
     )
   })
 
@@ -33,28 +33,20 @@ describe('Test for Button Basic.', () => {
 describe.each([
   [
     'primary',
-    '<button class="font-semibold bg-blue-500 text-white py-2 px-3 rounded"> test </button>',
+    '<button class="font-semibold bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-3 rounded"> test </button>',
   ],
   [
     'warning',
-    '<button class="font-semibold bg-yellow-500 text-white py-2 px-3 rounded"> test </button>',
+    '<button class="font-semibold bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-3 rounded"> test </button>',
   ],
-  [
-    'danger',
-    '<button class="font-semibold bg-red-500 text-white py-2 px-3 rounded"> test </button>',
-  ],
-  [
-    'black',
-    '<button class="font-semibold bg-gray-900 text-gray-100 hover:bg-gray-900 py-2 px-3 rounded"> test </button>',
-  ],
-])('Test for Button Color: %i', (type, expected) => {
+])('Test for Button Color: %s', (color, expected) => {
   const button = mount(Button, {
     propsData: {
       label: 'test',
-      type,
+      color,
     },
   })
-  it(`renders the correct markup: color = ${type}`, () => {
+  it(`renders the correct markup: color = ${color}`, () => {
     expect(button.html().replace(/\s+/g, ' ')).toBe(expected)
   })
 })
@@ -62,13 +54,13 @@ describe.each([
 describe.each([
   [
     'normal',
-    '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-2 px-3 rounded"> test </button>',
+    '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-2 px-3 rounded"> test </button>',
   ],
   [
     'small',
-    '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-1 px-2 text-sm rounded"> test </button>',
+    '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-1 px-2 text-sm rounded"> test </button>',
   ],
-])('Test for Button Size. %i', (size, expected) => {
+])('Test for Button Size. %s', (size, expected) => {
   const button = mount(Button, {
     propsData: {
       label: 'test',
@@ -90,7 +82,7 @@ describe('Test for Button Rounded.', () => {
 
   it('renders the correct markup: roundFull = true', () => {
     expect(normal.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-white text-gray-800 border-gray-400 border py-2 px-3 rounded-full"> test </button>'
+      '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-2 px-3 rounded-full"> test </button>'
     )
   })
 })
