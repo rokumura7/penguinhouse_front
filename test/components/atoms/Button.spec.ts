@@ -31,14 +31,8 @@ describe('Test for Button Basic.', () => {
 })
 
 describe.each([
-  [
-    'primary',
-    '<button class="font-semibold bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-3 rounded"> test </button>',
-  ],
-  [
-    'warning',
-    '<button class="font-semibold bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-3 rounded"> test </button>',
-  ],
+  ['primary', ['bg-indigo-500', 'hover:bg-indigo-600', 'text-white']],
+  ['warning', ['bg-yellow-500', 'hover:bg-yellow-600', 'text-white']],
 ])('Test for Button Color: %s', (color, expected) => {
   const button = mount(Button, {
     propsData: {
@@ -46,20 +40,14 @@ describe.each([
       color,
     },
   })
-  it(`renders the correct markup: color = ${color}`, () => {
-    expect(button.html().replace(/\s+/g, ' ')).toBe(expected)
+  it(`component has the correct classes: color = ${color}`, () => {
+    expected.forEach((clazz) => expect(button.classes()).toContain(clazz))
   })
 })
 
 describe.each([
-  [
-    'normal',
-    '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-2 px-3 rounded"> test </button>',
-  ],
-  [
-    'small',
-    '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-1 px-2 text-sm rounded"> test </button>',
-  ],
+  ['normal', ['py-2', 'px-3']],
+  ['small', ['py-1', 'px-2', 'text-sm']],
 ])('Test for Button Size. %s', (size, expected) => {
   const button = mount(Button, {
     propsData: {
@@ -67,8 +55,8 @@ describe.each([
       size,
     },
   })
-  it(`renders the correct markup: size = ${size}`, () => {
-    expect(button.html().replace(/\s+/g, ' ')).toBe(expected)
+  it(`component has the correct classes: size = ${size}`, () => {
+    expected.forEach((clazz) => expect(button.classes()).toContain(clazz))
   })
 })
 
@@ -80,9 +68,7 @@ describe('Test for Button Rounded.', () => {
     },
   })
 
-  it('renders the correct markup: roundFull = true', () => {
-    expect(normal.html().replace(/\s+/g, ' ')).toBe(
-      '<button class="font-semibold bg-gray-500 hover:bg-gray-600 text-white py-2 px-3 rounded-full"> test </button>'
-    )
+  it('component has the correct classes: roundFull = true', () => {
+    expect(normal.classes()).toContain('rounded-full')
   })
 })

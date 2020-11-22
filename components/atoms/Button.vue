@@ -45,7 +45,7 @@ export default Vue.extend({
       const colorSet = getColorSet(this.color)
       classes.push(colorSet.bg)
       classes.push(colorSet.bgHover)
-      classes.push('text-white')
+      classes.push(colorSet.text)
       switch (this.size) {
         case 'small':
           classes.push('py-1', 'px-2', 'text-sm')
