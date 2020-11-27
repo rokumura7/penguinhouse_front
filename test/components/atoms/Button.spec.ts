@@ -44,7 +44,9 @@ describe.each([
     },
   })
   it(`component has the correct classes: color = ${color}`, () => {
-    expected.forEach((clazz) => expect(button.classes()).toContain(clazz))
+    expected.forEach((className) =>
+      expect(button.classes()).toContain(className)
+    )
   })
 })
 
@@ -59,7 +61,9 @@ describe.each([
     },
   })
   it(`component has the correct classes: size = ${size}`, () => {
-    expected.forEach((clazz) => expect(button.classes()).toContain(clazz))
+    expected.forEach((className) =>
+      expect(button.classes()).toContain(className)
+    )
   })
 })
 
