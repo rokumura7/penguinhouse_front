@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-type ButtonType = 'primary' | 'warning' | 'danger' | 'black'
+import { Color, getColorSet } from '../../plugins/Colors'
 type ButtonSize = 'small' | 'normal'
 
 export default Vue.extend({
@@ -28,11 +28,11 @@ export default Vue.extend({
       required: false,
       default: false,
     },
-    type: {
+    color: {
       type: String,
       required: false,
-      default: undefined,
-    } as PropOptions<ButtonType>,
+      default: 'default',
+    } as PropOptions<Color>,
     onClick: {
       type: Function,
       required: false,
@@ -42,22 +42,8 @@ export default Vue.extend({
   computed: {
     getStyle(): String {
       const classes = []
-      switch (this.type) {
-        case 'primary':
-          classes.push('bg-blue-500', 'text-white')
-          break
-        case 'warning':
-          classes.push('bg-yellow-500', 'text-white')
-          break
-        case 'danger':
-          classes.push('bg-red-500', 'text-white')
-          break
-        case 'black':
-          classes.push('bg-gray-900', 'text-gray-100', 'hover:bg-gray-900')
-          break
-        default:
-          classes.push('bg-white', 'text-gray-800', 'border-gray-400', 'border')
-      }
+      const colorSet = getColorSet(this.color)
+      classes.push(colorSet.bg, colorSet.bgHover, colorSet.text)
       switch (this.size) {
         case 'small':
           classes.push('py-1', 'px-2', 'text-sm')
