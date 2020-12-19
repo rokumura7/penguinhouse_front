@@ -35,8 +35,7 @@ export default Vue.extend({
     } as PropOptions<Color>,
     onClick: {
       type: Function,
-      required: false,
-      default: () => {},
+      required: true,
     },
   },
   computed: {
