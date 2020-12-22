@@ -1,4 +1,4 @@
-import { Args, ArgType } from '@storybook/addons/dist/types'
+import { Args, ArgTypes } from '@storybook/addons/dist/types'
 import Button from '@/components/atoms/Button.vue'
 export default {
   title: 'Button',
@@ -29,7 +29,7 @@ export default {
   },
 }
 
-export const button = (_arg: Args, { argTypes }: ArgType) => ({
+export const button = (_arg: Args, { argTypes }: ArgTypes) => ({
   components: { Button },
   props: Object.keys(argTypes),
   template: '<Button v-bind="$props" />',
