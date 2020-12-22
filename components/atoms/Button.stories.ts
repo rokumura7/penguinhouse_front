@@ -1,3 +1,4 @@
+import { Args, ArgType } from '@storybook/addons/dist/types'
 import Button from '@/components/atoms/Button.vue'
 export default {
   title: 'Button',
@@ -28,8 +29,7 @@ export default {
   },
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const button = (arg: any, { argTypes }: any) => ({
+export const button = (_arg: Args, { argTypes }: ArgType) => ({
   components: { Button },
   props: Object.keys(argTypes),
   template: '<Button v-bind="$props" />',
