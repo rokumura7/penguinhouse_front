@@ -11,7 +11,10 @@ export default {
       },
       defaultValue: 'default',
     },
-    roundFull: { control: 'boolean' },
+    roundFull: {
+      control: 'boolean',
+      defaultValue: true,
+    },
     label: {
       control: 'text',
       defaultValue: 'Button',
@@ -20,8 +23,8 @@ export default {
       control: {
         type: 'select',
         options: ['small', 'normal'],
-        defaultValue: 'normal',
       },
+      defaultValue: 'normal',
     },
     onClick: {
       action: 'click',
