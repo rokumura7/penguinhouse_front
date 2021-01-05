@@ -40,6 +40,7 @@ describe.each([
   const button = mount(Button, {
     propsData: {
       label: 'test',
+      onClick: jest.fn(),
       color,
     },
   })
@@ -57,6 +58,7 @@ describe.each([
   const button = mount(Button, {
     propsData: {
       label: 'test',
+      onClick: jest.fn(),
       size,
     },
   })
@@ -71,6 +73,7 @@ describe('Test for Button Rounded.', () => {
   const normal = mount(Button, {
     propsData: {
       label: 'test',
+      onClick: jest.fn(),
       roundFull: true,
     },
   })

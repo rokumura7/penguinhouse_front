@@ -21,7 +21,7 @@ export default Vue.extend({
     size: {
       type: String,
       required: false,
-      default: undefined,
+      default: 'normal',
     } as PropOptions<ButtonSize>,
     roundFull: {
       type: Boolean,
@@ -35,8 +35,7 @@ export default Vue.extend({
     } as PropOptions<Color>,
     onClick: {
       type: Function,
-      required: false,
-      default: () => {},
+      required: true,
     },
   },
   computed: {
