@@ -21,7 +21,7 @@ export default Vue.extend({
     size: {
       type: String,
       required: false,
-      default: undefined,
+      default: 'normal',
     } as PropOptions<ButtonSize>,
     roundFull: {
       type: Boolean,

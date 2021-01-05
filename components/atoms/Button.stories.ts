@@ -7,13 +7,11 @@ export default {
     color: {
       control: {
         type: 'select',
-        options: ['default', 'primary', 'success', 'warning', 'dander'],
+        options: ['default', 'primary', 'success', 'warning', 'danger'],
       },
-      defaultValue: 'default',
     },
     roundFull: {
       control: 'boolean',
-      defaultValue: true,
     },
     label: {
       control: 'text',
@@ -24,7 +22,6 @@ export default {
         type: 'select',
         options: ['small', 'normal'],
       },
-      defaultValue: 'normal',
     },
     onClick: {
       action: 'click',
