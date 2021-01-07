@@ -1,5 +1,9 @@
 # penguinhouse_front
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rokumura7/penguinhouse_front/ci)
+![dependencies](https://david-dm.org/rokumura7/penguinhouse_front.svg)
+![devDependencies](https://david-dm.org/rokumura7/penguinhouse_front/dev-status.svg)
+
 ## Build Setup
 
 ```bash
