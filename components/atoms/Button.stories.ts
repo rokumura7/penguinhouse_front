@@ -1,5 +1,7 @@
 import { Args, ArgTypes } from '@storybook/addons/dist/types'
-import Button from '@/components/atoms/Button.vue'
+import { Button } from '@/components/atoms'
+import { colors } from '@/plugins/Colors'
+
 export default {
   title: 'Button',
   component: Button,
@@ -7,7 +9,7 @@ export default {
     color: {
       control: {
         type: 'select',
-        options: ['default', 'primary', 'success', 'warning', 'danger'],
+        options: colors,
       },
     },
     roundFull: {
