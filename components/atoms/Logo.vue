@@ -16,7 +16,6 @@ export default Vue.extend({
     },
     size: {
       type: String,
-      required: false,
       default: 'm',
     } as PropOptions<Size>,
   },
