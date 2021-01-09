@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import SigninForm from '@/components/molecules/SigninForm.vue'
+import { SigninForm } from '@/components/molecules'
 
 export default {
   components: { SigninForm },
