@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Chip from '@/components/atoms/Chip.vue'
+import { Chip } from '@/components/atoms'
 
 describe('Test for Button Basic.', () => {
   const wrapper = mount(Chip, {
