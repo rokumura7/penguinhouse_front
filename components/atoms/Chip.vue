@@ -16,12 +16,10 @@ export default Vue.extend({
   props: {
     label: {
       type: String,
-      required: false,
       default: 'info',
     },
     color: {
       type: String,
-      required: false,
       default: 'primary',
     } as PropOptions<Color>,
   },
