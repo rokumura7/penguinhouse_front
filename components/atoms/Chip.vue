@@ -1,6 +1,6 @@
 <template>
   <span
-    class="text-white rounded-full uppercase px-2 py-1 text-xs font-bold mr-3"
+    class="text-white rounded-full uppercase px-2 py-1 text-xs font-bold"
     :class="getColor"
   >
     {{ label }}
