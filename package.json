@@ -31,6 +31,7 @@
     "@tailwindcss/line-clamp": "^0.1.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
+    "nuxt-typed-vuex": "^0.1.22",
     "vuex": "^3.6.0"
   },
   "devDependencies": {
@@ -54,7 +55,6 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
-    "vue-jest": "^3.0.7",
-    "vuex-module-decorators": "^1.0.1"
+    "vue-jest": "^3.0.7"
   }
 }
