@@ -22,6 +22,7 @@
           class="focus:outline-none focus:shadow-outline"
           label="sign in"
           type="primary"
+          :on-click="signin"
         />
       </div>
     </div>
@@ -37,5 +38,10 @@ import Input from '@/components/atoms/Input.vue'
 export default Vue.extend({
   name: 'SigninForm',
   components: { Button, Logo, Input },
+  methods: {
+    signin() {
+      // TODO:
+    },
+  },
 })
 </script>

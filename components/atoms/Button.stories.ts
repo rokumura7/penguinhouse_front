@@ -1,11 +1,36 @@
+import { Args, ArgTypes } from '@storybook/addons/dist/types'
+import Button from '@/components/atoms/Button.vue'
 export default {
   title: 'Button',
+  component: Button,
+  argTypes: {
+    color: {
+      control: {
+        type: 'select',
+        options: ['default', 'primary', 'success', 'warning', 'danger'],
+      },
+    },
+    roundFull: {
+      control: 'boolean',
+    },
+    label: {
+      control: 'text',
+      defaultValue: 'Button',
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'normal'],
+      },
+    },
+    onClick: {
+      action: 'click',
+    },
+  },
 }
 
-export const Default = () => '<Button label="Button"/>'
-export const Primary = () => '<Button label="Button" color="primary"/>'
-export const Success = () => '<Button label="Button" color="success"/>'
-export const Warning = () => '<Button label="Button" color="warning"/>'
-export const Danger = () => '<Button label="Button" color="danger"/>'
-export const Small = () => '<Button label="Button" size="small"/>'
-export const RoundFull = () => '<Button label="Button" :roundFull="true"/>'
+export const button = (_arg: Args, { argTypes }: ArgTypes) => ({
+  components: { Button },
+  props: Object.keys(argTypes),
+  template: '<Button v-bind="$props" />',
+})
