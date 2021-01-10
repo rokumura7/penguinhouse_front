@@ -1,4 +1,5 @@
 export type Color = 'default' | 'primary' | 'success' | 'warning' | 'danger'
+export const colors = ['default', 'primary', 'success', 'warning', 'danger']
 export const getColorSet = (color: Color) => colorSets[color]
 
 interface ColorSet {

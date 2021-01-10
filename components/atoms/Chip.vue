@@ -1,6 +1,6 @@
 <template>
   <span
-    class="text-white rounded-full uppercase px-2 py-1 text-xs font-bold mr-3"
+    class="text-white rounded-full uppercase px-2 py-1 text-xs font-bold"
     :class="getColor"
   >
     {{ label }}
@@ -16,12 +16,10 @@ export default Vue.extend({
   props: {
     label: {
       type: String,
-      required: false,
       default: 'info',
     },
     color: {
       type: String,
-      required: false,
       default: 'primary',
     } as PropOptions<Color>,
   },

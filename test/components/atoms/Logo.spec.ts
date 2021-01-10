@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Logo from '@/components/atoms/Logo.vue'
+import { Logo } from '@/components/atoms'
 
 describe('Test for Logo Basic.', () => {
   const wrapper = mount(Logo, {

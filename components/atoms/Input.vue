@@ -13,7 +13,6 @@ export default Vue.extend({
   props: {
     placeholder: {
       type: String,
-      required: false,
       default: '',
     },
     type: {

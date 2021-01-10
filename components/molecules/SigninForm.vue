@@ -31,9 +31,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Button from '@/components/atoms/Button.vue'
-import Logo from '@/components/atoms/Logo.vue'
-import Input from '@/components/atoms/Input.vue'
+import { Button, Logo, Input } from '@/components/atoms'
 
 export default Vue.extend({
   name: 'SigninForm',

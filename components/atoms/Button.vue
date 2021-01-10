@@ -16,21 +16,17 @@ export default Vue.extend({
     label: {
       type: String,
       required: true,
-      default: '',
     },
     size: {
       type: String,
-      required: false,
       default: 'normal',
     } as PropOptions<ButtonSize>,
     roundFull: {
       type: Boolean,
-      required: false,
       default: false,
     },
     color: {
       type: String,
-      required: false,
       default: 'default',
     } as PropOptions<Color>,
     onClick: {

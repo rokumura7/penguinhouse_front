@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Button from '@/components/atoms/Button.vue'
+import { Button } from '@/components/atoms'
 
 describe('Test for Button Basic.', () => {
   const fn = jest.fn()
