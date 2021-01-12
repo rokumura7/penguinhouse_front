@@ -1,0 +1,14 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Gourmet",
+      "color": "#333"
+    },
+    {
+      "id": 2,
+      "name": "Programming",
+      "color": "#ccc"
+    }
+  ]
+}

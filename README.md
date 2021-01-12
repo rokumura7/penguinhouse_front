@@ -22,3 +22,26 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Run Mock Server for front-dev.
+
+```bash
+$ npm run mock
+```
+Now you can get mock responces.
+
+```bash
+curl localhost:3001/api/v1/categories
+[
+  {
+    "id": 1,
+    "name": "Gourmet",
+    "color": "#333"
+  },
+  {
+    "id": 2,
+    "name": "Programming",
+    "color": "#ccc"
+  }
+]
+```
