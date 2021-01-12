@@ -4,7 +4,7 @@
       style="background-color: #6973a2"
       class="flex rounded-t pl-1 pr-3 py-2 text-4xl items-center justify-center"
     >
-      <Logo src="pen.png" />
+      <Logo src="logo2.png" />
       <div class="font-bold text-white ml-3">Penguin House</div>
     </div>
     <div
