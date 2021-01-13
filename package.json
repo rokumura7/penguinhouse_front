@@ -9,6 +9,7 @@
     "generate": "nuxt-ts generate",
     "lint": "eslint --fix　--ext .js,.ts,.vue --ignore-path .gitignore .",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "storybook": "npx nuxt storybook"
   },
   "husky": {
