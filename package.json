@@ -9,8 +9,9 @@
     "generate": "nuxt-ts generate",
     "lint": "eslint --fix　--ext .js,.ts,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "storybook": "npx nuxt storybook",
     "mock": "json-server --watch _mock/server.json --routes _mock/routes.json --port 3001"
+    "test:watch": "jest --watchAll",
+    "storybook": "npx nuxt storybook"
   },
   "husky": {
     "hooks": {
