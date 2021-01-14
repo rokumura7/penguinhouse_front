@@ -1,4 +1,4 @@
-export enum Tag {
+export enum Label {
   Travel = 1,
   Hobby,
   Life,
