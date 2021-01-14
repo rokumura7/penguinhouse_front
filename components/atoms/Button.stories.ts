@@ -25,9 +25,6 @@ export default {
         options: ['small', 'normal'],
       },
     },
-    onClick: {
-      action: 'click',
-    },
   },
 }
 

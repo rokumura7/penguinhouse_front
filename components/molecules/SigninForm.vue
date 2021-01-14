@@ -22,7 +22,7 @@
           class="focus:outline-none focus:shadow-outline"
           label="sign in"
           type="primary"
-          :on-click="signin"
+          @myClick="signin"
         />
       </div>
     </div>

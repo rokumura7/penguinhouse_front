@@ -1,5 +1,5 @@
 <template>
-  <button class="font-semibold" :class="getStyle" @click="onClick">
+  <button class="font-semibold" :class="getStyle" @click="click">
     {{ label }}
   </button>
 </template>
@@ -29,10 +29,6 @@ export default Vue.extend({
       type: String,
       default: 'default',
     } as PropOptions<Color>,
-    onClick: {
-      type: Function,
-      required: true,
-    },
   },
   computed: {
     getStyle(): String {
@@ -49,6 +45,11 @@ export default Vue.extend({
       classes.push(this.roundFull ? 'rounded-full' : 'rounded')
 
       return classes.join(' ')
+    },
+  },
+  methods: {
+    click() {
+      this.$emit('myClick')
     },
   },
 })
