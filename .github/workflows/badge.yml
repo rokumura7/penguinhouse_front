@@ -1,6 +1,5 @@
 name: Compatibility Score Badge
-on:
-  pull_request
+on: pull_request
 
 jobs:
   badge:
