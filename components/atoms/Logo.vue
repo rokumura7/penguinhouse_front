@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <img :class="getSize" :src="src" />
-  </div>
+  <img :class="getSize" :src="src" />
 </template>
 
 <script lang="ts">
