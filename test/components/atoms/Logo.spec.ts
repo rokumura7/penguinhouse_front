@@ -11,13 +11,13 @@ describe('Test for Logo Basic.', () => {
     expect(wrapper.vm).toBeTruthy()
   })
 
-  it('has a span', () => {
+  it('has a img', () => {
     expect(wrapper.find('img').exists()).toBe(true)
   })
 
   it('renders the correct markup', () => {
     expect(wrapper.html().replace(/\s+/g, ' ')).toBe(
-      '<div><img src="test" class="h-16"></div>'
+      '<img src="test" class="h-16">'
     )
   })
 })
