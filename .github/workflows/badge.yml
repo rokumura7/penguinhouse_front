@@ -1,8 +1,7 @@
 name: Compatibility Score Badge
 on:
-  pull_request:
-    types:
-      - opened
+  pull_request
+
 jobs:
   badge:
     runs-on: ubuntu-latest
