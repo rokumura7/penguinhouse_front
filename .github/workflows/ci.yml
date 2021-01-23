@@ -38,6 +38,6 @@ jobs:
       - name: Report Coverage
         uses: paambaati/codeclimate-action@v2.7.5
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: 34cb9906ca9b4e97b9fcbea24ccada7da875af07f544724eb54f84ef0f811a25
         with:
           coverageCommand: npm run cov
